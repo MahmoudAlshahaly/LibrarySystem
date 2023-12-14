@@ -1,0 +1,94 @@
+﻿@model IEnumerable<LibrarySystem.BL.DTOS.BookDTO.BookReadDTO>
+@using LibrarySystem.DAL.Enums;
+
+@{
+    ViewData["Title"] = "GetAllBooks";
+    
+}
+
+
+
+<h1>Get All Books</h1>
+@if (@User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.Role)?.Value == nameof(UserType.Admin))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-success" >Create New</a>
+    </p>
+}
+
+<form asp-action="GetByAuthorOrTitleOrISBN">
+    <div class="md-form form-control-sm form-2 pl-0">
+ 
+
+        <input name="pattern" placeholder="Search by Author or Title or ISBN" class="form-control" />
+
+        <input type="submit" value="Search" class="btn btn-primary" />
+        
+
+    </div>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookID)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.BookISBN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookAuthor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookStatus)
+            </th>
+            <th>Operation</th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookISBN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookAuthor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookStatus)
+            </td>
+            <td>
+                    @if (@User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.Role)?.Value == nameof(UserType.Admin))
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id=item.BookID }, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+                        @Html.ActionLink("Details", "GetBookByID", new { id=item.BookID  }, htmlAttributes: new { @class = "btn btn-secondary", @role="button" })
+                        @Html.ActionLink("Delete", "Delete", new {  id=item.BookID }, htmlAttributes: new { @class = "btn btn-danger", @role="button" })
+                    }
+                    @if (item.BookStatus == LibrarySystem.DAL.Enums.BookStatus.Available)
+                    {
+                        @Html.ActionLink("Borrow", "BorrowingBook", new { id=item.BookID }, htmlAttributes: new { @class = "btn btn-success", @role="button" })
+                    }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

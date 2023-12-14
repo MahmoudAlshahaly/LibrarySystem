@@ -1,0 +1,51 @@
+﻿@using LibrarySystem.DAL.Enums;
+@model IEnumerable<LibrarySystem.BL.DTOS.BorrowBookDTO.BorrowBookReadForUserDTO>
+
+@{
+    ViewData["Title"] = "GetAllForUser";
+}
+
+<h1>GetAllForUser</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowStatus)
+            </th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BorrowID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookTitle)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowStatus)
+            </td>
+            <td>
+                @if(item.BorrowStatus==BorrowStatus.Borrowing){
+                    @Html.ActionLink("Return", "ReturnBorrowingBook", new {  id=item.BorrowID }, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

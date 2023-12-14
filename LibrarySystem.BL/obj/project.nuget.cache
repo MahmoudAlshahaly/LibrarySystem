@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s1czLpCz8/W7G6VBs+2lDUA/gz2Rl6cbneyJ6rQ8xM9/u18O5mMl4sXOeqsOY1L0V+xe9YUDfgr4L3S26kFqYQ==",
+  "dgSpecHash": "URxh2IQNqBkGcet5eqI3/Vdj+vAWoQyM94PRnaeUdAkOViRwLHrnsqtOP8X0+q6v9qmoIzdBv7cxNJiIQWVLUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rama 2\\Desktop\\LibrarySystem\\LibrarySystem.BL\\LibrarySystem.BL.csproj",
+  "projectFilePath": "D:\\LibrarySystem\\LibrarySystem.BL\\LibrarySystem.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rama 2\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Rama 2\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

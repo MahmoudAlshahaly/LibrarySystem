@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LibrarySystem.PL
 build_property.RootNamespace = LibrarySystem.PL
-build_property.ProjectDir = C:\Users\Rama 2\Desktop\LibrarySystem\LibrarySystem.Presentation\
+build_property.ProjectDir = D:\LibrarySystem\LibrarySystem.Presentation\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Rama 2\Desktop\LibrarySystem\LibrarySystem.Presentation
+build_property.MSBuildProjectDirectory = D:\LibrarySystem\LibrarySystem.Presentation
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/Book/Create.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/Book/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/Book/Edit.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/Book/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/Book/GetAllBooks.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/Book/GetAllBooks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xHZXRBbGxCb29rcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/Book/GetBookByID.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/Book/GetBookByID.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xHZXRCb29rQnlJRC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/BorrowBook/GetAllForUser.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/BorrowBook/GetAllForUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93Qm9va1xHZXRBbGxGb3JVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/Shared/Error.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/User/Login.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/User/Register.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/User/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/_ViewImports.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/_ViewStart.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rama 2/Desktop/LibrarySystem/LibrarySystem.Presentation/Views/Shared/_Layout.cshtml]
+[D:/LibrarySystem/LibrarySystem.Presentation/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-46sezyb7xo

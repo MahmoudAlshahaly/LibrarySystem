@@ -13,3 +13,18 @@ C:\Users\Rama 2\Desktop\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibraryS
 C:\Users\Rama 2\Desktop\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\refint\LibrarySystem.BL.dll
 C:\Users\Rama 2\Desktop\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.pdb
 C:\Users\Rama 2\Desktop\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\ref\LibrarySystem.BL.dll
+D:\LibrarySystem\LibrarySystem.BL\bin\Debug\net6.0\LibrarySystem.BL.deps.json
+D:\LibrarySystem\LibrarySystem.BL\bin\Debug\net6.0\LibrarySystem.BL.dll
+D:\LibrarySystem\LibrarySystem.BL\bin\Debug\net6.0\LibrarySystem.BL.pdb
+D:\LibrarySystem\LibrarySystem.BL\bin\Debug\net6.0\LibrarySystem.DAL.dll
+D:\LibrarySystem\LibrarySystem.BL\bin\Debug\net6.0\LibrarySystem.DAL.pdb
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.csproj.AssemblyReference.cache
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.AssemblyInfoInputs.cache
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.AssemblyInfo.cs
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.csproj.CoreCompileInputs.cache
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.csproj.CopyComplete
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.dll
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\refint\LibrarySystem.BL.dll
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\LibrarySystem.BL.pdb
+D:\LibrarySystem\LibrarySystem.BL\obj\Debug\net6.0\ref\LibrarySystem.BL.dll

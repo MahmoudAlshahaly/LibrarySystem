@@ -13,5 +13,7 @@ namespace LibrarySystem.DAL.Models
         public string? UserName { get; set; }
         public string? UserPassword { get; set; }
         public UserType UserType { get; set; }
+
+        public List<BorrowBook> BorrowBooks { get; set;}
     }
 }

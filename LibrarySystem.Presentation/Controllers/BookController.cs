@@ -6,6 +6,7 @@ using LibrarySystem.DAL.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using System;
 
 namespace LibrarySystem.PL.Controllers
@@ -67,73 +68,83 @@ namespace LibrarySystem.PL.Controllers
             if (ModelState.IsValid && id == bookUpdateDTO.BookID)
             {
                 bookManager.Update(bookUpdateDTO);
+                TempData["Message"] = "Book Edited Successfully";
+
                 return RedirectToAction(nameof(GetAllBooks));
             }
             return View();
         }
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int id, BookStatus bookStatus)
         {
-            try
+
+            if (bookStatus == BookStatus.Available)
             {
                 bookManager.Delete(id);
+                TempData["Message"] = "Book Deleted Successfully";
+
                 return RedirectToAction(nameof(GetAllBooks));
             }
-            catch(Exception ex)
+            else
             {
-                return View(nameof(GetAllBooks));
+                TempData["Message"] = "You Can not Delete this Book Because it is borrowing";
+                return RedirectToAction(nameof(GetAllBooks));
             }
         }
         public ActionResult BorrowingBook(int id)
         {
+            //try
+            //{
+            //    BookUpdateStatusDTO bookUpdateStatusDTO = new BookUpdateStatusDTO
+            //    {
+            //        BookID = id,
+            //        BookStatus = BookStatus.Unavailable
+            //    };
+            //    bookManager.UpdateStatus(bookUpdateStatusDTO);
+
+            //    BorrowBookWriteDTO borrowBookWriteDTO = new BorrowBookWriteDTO
+            //    {
+            //        BookID = id,
+            //        //BorrowStatus = BorrowStatus.Borrowing,
+            //        //BorrowDate = DateTime.Now,
+            //        UserID= Convert.ToInt32(User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.NameIdentifier)?.Value)
+            //    };
+            //    borrowBookManager.Insert(borrowBookWriteDTO);
+            //    TempData["Message"] = "Book Borrowing Successfuly";
+            //    return RedirectToAction(nameof(GetAllBooks));
+            //}
+            //catch
+            //{
+            //    TempData["Message"] = "Erorr During Borrowing";
+
+            //    return View();
+            //}
+
+
             try
             {
-                BookUpdateStatusDTO bookUpdateStatusDTO = new BookUpdateStatusDTO
-                {
-                    BookID = id,
-                    BookStatus = BookStatus.Unavailable
-                };
-                bookManager.UpdateStatus(bookUpdateStatusDTO);
-
                 BorrowBookWriteDTO borrowBookWriteDTO = new BorrowBookWriteDTO
                 {
-                    BookID = id,
-                    //BorrowStatus = BorrowStatus.Borrowing,
-                    //BorrowDate = DateTime.Now,
-                    UserID= Convert.ToInt32(User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.NameIdentifier)?.Value)
+                    Book = new BookUpdateStatusDTO {
+                        BookID = id,
+                        BookStatus = BookStatus.Unavailable
+                    },
+                    BorrowStatus = BorrowStatus.Borrowing,
+                    BorrowDate = DateTime.Now,
+                    UserID = Convert.ToInt32(User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.NameIdentifier)?.Value)
                 };
-                borrowBookManager.Insert(borrowBookWriteDTO);
+
+                borrowBookManager.BorrowingBook(borrowBookWriteDTO);
+                TempData["Message"] = "Book Borrowing Successfuly";
                 return RedirectToAction(nameof(GetAllBooks));
             }
             catch
             {
+                TempData["Message"] = "Erorr During Borrowing";
+
                 return View();
             }
         }
 
-        public ActionResult ReturnBorrowingBook(int id)
-        {
-            try
-            {
-                BookUpdateStatusDTO bookUpdateStatusDTO = new BookUpdateStatusDTO
-                {
-                    BookID = id,
-                    BookStatus = BookStatus.Available
-                };
-                bookManager.UpdateStatus(bookUpdateStatusDTO);
 
-                BorrowBookUpdateBorrowStatusDTO borrowBookUpdateBorrowStatusDTO = new BorrowBookUpdateBorrowStatusDTO
-                {
-                    BorrowID = id,
-                    BorrowStatus = BorrowStatus.Returned
-                };
-                borrowBookManager.UpdateStatus(borrowBookUpdateBorrowStatusDTO);
-                return RedirectToAction("GetAllForUser", "BorrowBook");
-
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

@@ -19,7 +19,7 @@ namespace LibrarySystem.BL.DTOS.BookDTO
         public string? BookDescription { get; set; }
         [Required]
         public string? BookAuthor { get; set; }
-        public BookStatus BookStatus { get; set; }
+        public BookStatus BookStatus { get; set; } = BookStatus.Available;
 
     }
 }

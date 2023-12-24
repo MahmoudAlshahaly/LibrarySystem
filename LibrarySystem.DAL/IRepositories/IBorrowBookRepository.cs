@@ -10,7 +10,9 @@ namespace LibrarySystem.DAL.IRepositories
     public interface IBorrowBookRepository
     {
         List<BorrowBook> GetAllForUser(int UserID);
-        int Insert(BorrowBook Entity);
+        int ReturnBorrow(BorrowBook Entity);
+
+        int BorrowingBook(BorrowBook Entity);
         int UpdateStatus(BorrowBook Entity);
     }
 }

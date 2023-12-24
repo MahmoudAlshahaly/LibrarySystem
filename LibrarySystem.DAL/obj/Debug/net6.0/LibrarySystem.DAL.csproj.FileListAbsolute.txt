@@ -22,3 +22,27 @@ D:\LibrarySystem\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.dll
 D:\LibrarySystem\LibrarySystem.DAL\obj\Debug\net6.0\refint\LibrarySystem.DAL.dll
 D:\LibrarySystem\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.pdb
 D:\LibrarySystem\LibrarySystem.DAL\obj\Debug\net6.0\ref\LibrarySystem.DAL.dll
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\bin\Debug\net6.0\LibrarySystem.DAL.deps.json
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\bin\Debug\net6.0\LibrarySystem.DAL.dll
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\bin\Debug\net6.0\LibrarySystem.DAL.pdb
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.csproj.AssemblyReference.cache
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.AssemblyInfoInputs.cache
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.AssemblyInfo.cs
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.dll
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\refint\LibrarySystem.DAL.dll
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.pdb
+C:\Users\Rama 2\Downloads\Compressed\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\ref\LibrarySystem.DAL.dll
+D:\LibrarySystem-main\LibrarySystem.DAL\bin\Debug\net6.0\LibrarySystem.DAL.deps.json
+D:\LibrarySystem-main\LibrarySystem.DAL\bin\Debug\net6.0\LibrarySystem.DAL.dll
+D:\LibrarySystem-main\LibrarySystem.DAL\bin\Debug\net6.0\LibrarySystem.DAL.pdb
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.csproj.AssemblyReference.cache
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.AssemblyInfoInputs.cache
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.AssemblyInfo.cs
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.csproj.CoreCompileInputs.cache
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.dll
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\refint\LibrarySystem.DAL.dll
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\LibrarySystem.DAL.pdb
+D:\LibrarySystem-main\LibrarySystem.DAL\obj\Debug\net6.0\ref\LibrarySystem.DAL.dll

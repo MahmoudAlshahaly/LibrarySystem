@@ -20,5 +20,7 @@ namespace LibrarySystem.BL.DTOS.BookDTO
         [Required]
         public string? BookAuthor { get; set; }
         public BookStatus BookStatus { get; set; } = BookStatus.Available;
+        public bool isDeleted { get; set; }=false;
+
     }
 }

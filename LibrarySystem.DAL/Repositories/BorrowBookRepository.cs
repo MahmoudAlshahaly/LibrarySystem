@@ -33,17 +33,18 @@ namespace LibrarySystem.DAL.Repositories
             return entity;
         }
 
-        public int Insert(BorrowBook entity)
+        public int BorrowingBook(BorrowBook entity)
         {
             param = new Dictionary<string, object>()
             {
                 //["@BorrowID"] = entity.BorrowID,
-                ["@BookID"] = entity.BookID,
+                ["@BookID"] = entity.Book.BookID,
+                ["@BookStatus"] = entity.Book.BookStatus,
                 ["@UserID"] = entity.UserID,
                 ["@BorrowDate"] = entity.BorrowDate,
                 ["@BorrowStatus"] = entity.BorrowStatus
             };
-            return db.ExecuteStored("BorrowBookInsert", param);
+            return db.ExecuteStored("BorrowingBook", param);
         }
 
         public int UpdateStatus(BorrowBook entity)
@@ -54,6 +55,17 @@ namespace LibrarySystem.DAL.Repositories
                 ["@BorrowStatus"] = entity.BorrowStatus
             };
             return db.ExecuteStored("BorrowBookUpdateStatus", param);
+        }
+        public int ReturnBorrow(BorrowBook entity)
+        {
+            param = new Dictionary<string, object>()
+            {
+                ["@BookID"] = entity.Book.BookID,
+                ["@BookStatus"] = entity.Book.BookStatus,
+                ["@BorrowID"] = entity.BorrowID,
+                ["@BorrowStatus"] = entity.BorrowStatus
+            };
+            return db.ExecuteStored("ReturnBorrowBook", param);
         }
         public List<BorrowBook> MapDataTableToBorrowBooks(DataTable dataTable)
         {
@@ -70,8 +82,8 @@ namespace LibrarySystem.DAL.Repositories
             entity.BorrowID = Convert.ToInt32(dataRow[0]);
             entity.BorrowDate = Convert.ToDateTime(dataRow[1]);
             entity.BorrowStatus = (BorrowStatus)dataRow[2];
-            entity.BookID = Convert.ToInt32(dataRow[3]);
-            entity.BookTitle = dataRow[4].ToString();
+            entity.Book.BookID = Convert.ToInt32(dataRow[3]);
+            entity.Book.BookTitle = dataRow[4].ToString();
             entity.UserID = Convert.ToInt32(dataRow[5]);
             return entity;
         }

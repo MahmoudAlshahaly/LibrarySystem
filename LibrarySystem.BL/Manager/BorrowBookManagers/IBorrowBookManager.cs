@@ -1,5 +1,6 @@
-﻿using LibrarySystem.BL.DTOS.BookDTO;
-using LibrarySystem.BL.DTOS.BorrowBookDTO;
+﻿using LibrarySystem.BL.DTOS.BorrowBookDTO;
+using LibrarySystem.BL.DTOS.UserDTO;
+using LibrarySystem.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace LibrarySystem.BL.Manager.BorrowBookManagers
     public interface IBorrowBookManager
     {
         IEnumerable<BorrowBookReadForUserDTO> GetAllForUser(int UserID);
-        BorrowBookWriteDTO Insert(BorrowBookWriteDTO entity);
+        ReturnBorrowBookDto ReturnBook(ReturnBorrowBookDto entity);
+        BorrowBookWriteDTO BorrowingBook(BorrowBookWriteDTO entity);
         int UpdateStatus(BorrowBookUpdateBorrowStatusDTO entity);
         
 

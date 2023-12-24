@@ -14,7 +14,9 @@ namespace LibrarySystem.DAL.Models
         public DateTime BorrowDate { get; set; }
         public BorrowStatus BorrowStatus { get; set; }
         public int BookID { get; set; }
-        public string? BookTitle { get; set; }
+        public  Book Book { get; set; } = new Book();
         public int UserID { get; set; }
+        //public  User User { get; set; }
+
     }
 }

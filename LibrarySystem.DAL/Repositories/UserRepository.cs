@@ -24,7 +24,7 @@ namespace LibrarySystem.DAL.Repositories
 
         public List<User> GetAll()
         {
-            dataTable = db.SelectAllStored("UserGetAll");
+            dataTable = db.SelectStoredNoParam("UserGetAll");
             List<User> entitys = MapDataTableToUsers(dataTable);
             return entitys;
         }
@@ -105,11 +105,7 @@ namespace LibrarySystem.DAL.Repositories
                 entity.UserType = (UserType)dataRow[3];
 
             }
-            catch (Exception)
-            {
-
-            }
-         
+            catch (Exception) { }
             return entity;
         }
 

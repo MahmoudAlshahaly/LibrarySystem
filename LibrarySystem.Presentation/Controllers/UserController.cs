@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace LibrarySystem.PL.Controllers
 {
@@ -45,11 +46,13 @@ namespace LibrarySystem.PL.Controllers
                 var result = userManager.Insert(userWriteDTO);
                 if (result != null)
                 {
+                    TempData["Message"] = "You Registerd susccessfully";
+
                     return RedirectToAction(nameof(Register));
                 }
             }
 
-            return View();
+            return View(userWriteDTO);
         }
 
         public ActionResult Login()

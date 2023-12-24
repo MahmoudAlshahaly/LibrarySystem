@@ -24,7 +24,7 @@ namespace DAL
             da = new SqlDataAdapter(sqlcmd);
             tbl = new DataTable();
         }
-        public DataTable SelectAllStored(string cmd)
+        public DataTable SelectStoredNoParam(string cmd)
         {
             tbl.Reset();
             sqlcmd.CommandText = cmd;
@@ -53,16 +53,12 @@ namespace DAL
 
         public int ExecuteStored(string cmd, Dictionary<string, object> param)
         {
-            //, SqlParameter[] param
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.CommandText = cmd;
             sqlcmd.Parameters.Clear();
-            //SqlBulkCopy sqlBulkCopy = new SqlBulkCopy(con);
-            //sqlBulkCopy.DestinationTableName = "";
-            //sqlBulkCopy.WriteToServer(DataTable);
+
             if (param != null)
             {
-                //sqlcmd.Parameters.AddRange(param);
                 foreach (KeyValuePair<string, object> item in param)
                 {
                     sqlcmd.Parameters.AddWithValue(item.Key, item.Value);
@@ -76,9 +72,27 @@ namespace DAL
             con.Open();
             int affected = sqlcmd.ExecuteNonQuery();
             con.Close();
-
             return affected;
+        }
 
+
+        public int ExecuteStoredBulkInsert(DataTable tableInsert,string distinationTable)
+        {
+
+
+            try
+            {
+                SqlBulkCopy sqlBulkCopy = new SqlBulkCopy(con);
+                sqlBulkCopy.DestinationTableName = distinationTable;
+                sqlBulkCopy.WriteToServer(tableInsert);
+            }
+            catch (Exception)
+            {
+
+            }
+
+
+            return 1;
         }
 
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LibrarySystem\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj": {}
+    "D:\\LibrarySystem-main\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj": {}
   },
   "projects": {
-    "D:\\LibrarySystem\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj": {
+    "D:\\LibrarySystem-main\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LibrarySystem\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj",
+        "projectUniqueName": "D:\\LibrarySystem-main\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj",
         "projectName": "LibrarySystem.DAL",
-        "projectPath": "D:\\LibrarySystem\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj",
+        "projectPath": "D:\\LibrarySystem-main\\LibrarySystem.DAL\\LibrarySystem.DAL.csproj",
         "packagesPath": "C:\\Users\\Rama 2\\.nuget\\packages\\",
-        "outputPath": "D:\\LibrarySystem\\LibrarySystem.DAL\\obj\\",
+        "outputPath": "D:\\LibrarySystem-main\\LibrarySystem.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

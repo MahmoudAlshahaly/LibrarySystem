@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace LibrarySystem.BL.DTOS.BorrowBookDTO
 {
-    public class BorrowBookWriteDTO
+    public class BorrowBookReadDTO
     {
         public DateTime BorrowDate { get; set; } = DateTime.Now;
         public BorrowStatus BorrowStatus { get; set; } = BorrowStatus.Borrowing;
-        public BookUpdateStatusDTO Book { get; set; }
+        public BookReadDTO Book { get; set; }
         public int UserID { get; set; }
     }
 }

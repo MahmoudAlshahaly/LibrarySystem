@@ -1,12 +1,24 @@
 ﻿@using LibrarySystem.DAL.Enums;
-@model IEnumerable<LibrarySystem.BL.DTOS.BorrowBookDTO.BorrowBookReadForUserDTO>
+@using LibrarySystem.BL.DTOS.BorrowBookDTO;
+@model IEnumerable<BorrowBookReadForUserDTO>
 
 @{
     ViewData["Title"] = "GetAllForUser";
 }
 
 <h1>GetAllForUser</h1>
-
+@if (TempData["Message"] != null)
+{
+    @*     <div class="alert alert-danger">
+        <p>@TempData["Message"]</p>
+    </div>
+ *@
+    <script type="text/javascript">
+        window.onload = function () {
+            alert('@TempData["Message"]');
+        };
+    </script>
+}
 <table class="table">
     <thead>
         <tr>
@@ -14,7 +26,7 @@
                 @Html.DisplayNameFor(model => model.BorrowID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BookTitle)
+                @Html.DisplayNameFor(model => model.Book.BookTitle)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.BorrowDate)
@@ -32,7 +44,7 @@
                     @Html.DisplayFor(modelItem => item.BorrowID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.BookTitle)
+                    @Html.DisplayFor(modelItem => item.Book.BookTitle)
                 </td>
             <td>
                 @Html.DisplayFor(modelItem => item.BorrowDate)
@@ -42,8 +54,8 @@
             </td>
             <td>
                 @if(item.BorrowStatus==BorrowStatus.Borrowing){
-                    @Html.ActionLink("Return", "ReturnBorrowingBook", new {  id=item.BorrowID }, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
-                }
+                        @Html.ActionLink("Return", "ReturnBorrowingBook", new {  borrowid=item.BorrowID , bookid=item.Book.BookID }, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+                    }
             </td>
         </tr>
 }

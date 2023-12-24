@@ -28,7 +28,7 @@ namespace LibrarySystem.DAL.Repositories
         //}
         public List<Book> GetAll()
         {
-            dataTable = db.SelectAllStored("BookGetAll");
+            dataTable = db.SelectStoredNoParam("BookGetAll");
             List<Book> entitys = MapDataTableToBooks(dataTable);
             return entitys;
         }
@@ -74,8 +74,8 @@ namespace LibrarySystem.DAL.Repositories
         {
             Dictionary<string, object> param = new Dictionary<string, object>()
             {
-                ["@BookID"] =id
-
+                ["@BookID"] = id,
+                ["@IsDeleted"]=true
             };
             return db.ExecuteStored("BookDeleteByID", param);
         }
@@ -125,5 +125,7 @@ namespace LibrarySystem.DAL.Repositories
             entity.BookStatus =(BookStatus) dataRow[5];
             return entity;
         }
+
+       
     }
 }

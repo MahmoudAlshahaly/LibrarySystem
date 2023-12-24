@@ -15,14 +15,14 @@ builder.Services.AddSingleton<DBHelper>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBorrowBookRepository, BorrowBookRepository>();
-builder.Services.AddHttpContextAccessor();
+//builder.Services.AddHttpContextAccessor();
 
 
-builder.Services.AddDistributedMemoryCache();
+//builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(option => {
 option.IdleTimeout = TimeSpan.FromMinutes(60);
     });
-builder.Services.AddMvc();
+//builder.Services.AddMvc();
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {

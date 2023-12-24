@@ -22,6 +22,33 @@ namespace LibrarySystem.PL.Controllers
             var UserID= Convert.ToInt32(User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.NameIdentifier)?.Value);
             return View(borrowBookManager.GetAllForUser(UserID));
         }
-      
+        public ActionResult ReturnBorrowingBook(int borrowid, int bookid)
+        {
+            try
+            {
+                //two round trip before this code 
+
+
+
+                //this code one round trip to database
+                ReturnBorrowBookDto returnBorrowBookDto = new ReturnBorrowBookDto
+                {
+                    Book=new BookUpdateStatusDTO {BookID=bookid,BookStatus=BookStatus.Available },
+                    BorrowID = borrowid,
+                    BorrowStatus = BorrowStatus.Returned
+
+                };
+
+                borrowBookManager.ReturnBook(returnBorrowBookDto);
+                TempData["Message"] = "Book Returned susccessfully";
+
+                return RedirectToAction("GetAllForUser", "BorrowBook");
+
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using LibrarySystem.BL.DTOS.BookDTO;
 using LibrarySystem.BL.DTOS.BorrowBookDTO;
+using LibrarySystem.BL.DTOS.UserDTO;
 using LibrarySystem.DAL.IRepositories;
 using LibrarySystem.DAL.Models;
 using LibrarySystem.DAL.Repositories;
@@ -36,10 +36,10 @@ namespace LibrarySystem.BL.Manager.BorrowBookManagers
             return result;
         }
 
-        public BorrowBookWriteDTO Insert(BorrowBookWriteDTO entity)
+        public BorrowBookWriteDTO BorrowingBook(BorrowBookWriteDTO entity)
         {
             var result = mapper.Map<BorrowBook>(entity);
-            borrowBookRepository.Insert(result);
+            borrowBookRepository.BorrowingBook(result);
             return entity;
         }
 
@@ -48,6 +48,14 @@ namespace LibrarySystem.BL.Manager.BorrowBookManagers
 
             var result = mapper.Map<BorrowBook>(entity);
             return borrowBookRepository.UpdateStatus(result);
+        }
+
+        public ReturnBorrowBookDto ReturnBook(ReturnBorrowBookDto entity)
+        {
+            var result = mapper.Map<BorrowBook>(entity);
+            borrowBookRepository.ReturnBorrow(result);
+            return entity;
+
         }
     }
 }

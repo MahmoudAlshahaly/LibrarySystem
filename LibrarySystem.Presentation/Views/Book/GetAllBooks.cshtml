@@ -27,8 +27,18 @@
 
     </div>
 </form>
-
-
+@if(TempData["Message"]!=null)
+{
+@*     <div class="alert alert-danger">
+        <p>@TempData["Message"]</p>
+    </div>
+ *@
+    <script type="text/javascript">
+        window.onload = function () {
+            alert('@TempData["Message"]');
+        };
+    </script>
+}
 <table class="table">
     <thead>
         <tr>
@@ -81,7 +91,7 @@
                     {
                         @Html.ActionLink("Edit", "Edit", new { id=item.BookID }, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
                         @Html.ActionLink("Details", "GetBookByID", new { id=item.BookID  }, htmlAttributes: new { @class = "btn btn-secondary", @role="button" })
-                        @Html.ActionLink("Delete", "Delete", new {  id=item.BookID }, htmlAttributes: new { @class = "btn btn-danger", @role="button" })
+                        @Html.ActionLink("Delete", "Delete", new {  id=item.BookID ,bookStatus=item.BookStatus}, htmlAttributes: new { @class = "btn btn-danger", @role="button" })
                     }
                     @if (item.BookStatus == LibrarySystem.DAL.Enums.BookStatus.Available)
                     {

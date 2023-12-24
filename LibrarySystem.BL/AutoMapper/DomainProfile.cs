@@ -20,6 +20,7 @@ namespace LibrarySystem.BL.AutoMapper
             CreateMap<Book, BookUpdateDTO>().ReverseMap();
             CreateMap<Book, BookWriteDTO>().ReverseMap();
             CreateMap<Book, BookUpdateStatusDTO>().ReverseMap();
+            CreateMap<Book, ReturnBorrowBookDto>().ReverseMap();
 
             CreateMap<User, UserReadDTO>().ReverseMap();
             CreateMap<User, UserUpdateDTO>().ReverseMap();
@@ -28,7 +29,8 @@ namespace LibrarySystem.BL.AutoMapper
             CreateMap<BorrowBook, BorrowBookWriteDTO>().ReverseMap();
             CreateMap<BorrowBook, BorrowBookReadForUserDTO>().ReverseMap();
             CreateMap<BorrowBook, BorrowBookUpdateBorrowStatusDTO>().ReverseMap();
-           
+            CreateMap<BorrowBook, ReturnBorrowBookDto>().ReverseMap();
+
 
         }
     }

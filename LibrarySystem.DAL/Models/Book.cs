@@ -15,5 +15,9 @@ namespace LibrarySystem.DAL.Models
         public string? BookDescription { get; set; }
         public string? BookAuthor { get; set; }
         public BookStatus BookStatus { get; set; }
+        public int BorrowBookID { get; set; }
+        public  BorrowBook BorrowBook { get; set; }
+        public bool isDeleted { get; set; }
+
     }
 }
